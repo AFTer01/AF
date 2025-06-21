@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>หน้าแรก</title>
+
+  <!-- ✅ โหลดฟอนต์ Kanit และ Prompt -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Prompt&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-image: url('images/B1.png');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Prompt', 'Kanit', sans-serif; /* ✅ ใช้ Prompt */
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      position: relative;
+    }
+
+    .header {
+      width: 100%;
+      height: auto;
+      z-index: 10;
+      position: relative;
+    }
+
+    .header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 120%;
+      height: 120%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .link-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .link-block:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .link-block img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .link-text {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .qr-block {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .qr-block img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .qr-text {
+      font-size: 18px;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="images/H.png" alt="แบนเนอร์ด้านบน" />
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+
+    <a class="link-block" href="https://ezdn.app/AF_" target="_blank">
+      <img src="images/ez.jfif" alt="โลโก้ Easydonate" />
+      <div class="link-text">โดเนทด้วย Easydonate 💙</div>
+    </a>
+
+    <a class="link-block" href="https://tmn.app.link/OYIUKCz9mUb" target="_blank">
+      <img src="images/W.png" alt="โลโก้วอเล็ต" />
+      <div class="link-text">โอนเบอร์วอ 0932850736 🧡</div>
+    </a>
+
+    <a class="link-block" target="_blank">
+      <img src="images/K.jpg" alt="โลโก้พร้อมเพย์" />
+      <div class="link-text">โอนพร้อมเพลย์ด้วย QR Code 💚❤️</div>
+    </a>
+
+    <div class="qr-block" style="text-align: center;">
+        <img src="images/BANK.jfif" alt="QR พร้อมเพย์" style="width: 300px; height: auto; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto;">
+        <div class="qr-text">เลขบัญชี: 123-4-56789-0</div>
+        <div class="qr-text">: นาย ศุภัชเศรษฐ์ รัตนพล :</div>
+      </div>
+      
+  </div>
+
+  <script>
+    window.onload = function () {
+      document.body.style.opacity = 1;
+    };
+  </script>
+
+</body>
+</html>
